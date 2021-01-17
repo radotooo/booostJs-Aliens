@@ -8,12 +8,53 @@
 		body {
 			margin: 0;
 			padding: 0;
+      height: 1vh;
 			overflow: hidden;
 		}
+    #container {
+      background-image: url(./src/assets/background.jpg);
+      background-size: cover;
+      width: 1400px;
+      height: 1200px;
+      position: relative;
+    }
+    .ufo {
+      width: 150px;
+      top: 600px;
+      position: absolute;
+      z-index: 9;
+      left: 1330px;
+    }
+    .saucer {
+      height: 70px;
+      margin-left: 75px;
+      width:  90px;
+    }
+    .beam {
+      opacity: 0;
+      margin-left: 9px
+    }
+    #beam-bottom {
+      margin-top: -35px;
+    }
+    .cow {
+      height: 30px;
+      width: 30px;
+      margin-left: 605px;
+      margin-top: 1000px;
+      z-index: 0;
+    }
 	</style>
 
 </head>
 <body>
-
+  <div id='container'>
+    <div class="ufo">
+      <img class="saucer" src="./src/assets/saucer.png">
+      <img class="beam" id='beam-top' src="./src/assets/beam.png">
+      <img class="beam" id='beam-bottom' src="./src/assets/beam-bottom.png">
+    </div>
+    <img class="cow" src="./src/assets/cow.png">
+  </div>
 </body>
 </html>
