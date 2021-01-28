@@ -17,7 +17,7 @@ export default class Cow extends EventEmitter {
     await gsap.to(this._cowElement, {
       y: -390,
       id: 'cowAbduction',
-      duration: 3,
+      duration: 2,
     });
     this.emit(Cow.events.ABDUCT_COMPLETE);
   }
