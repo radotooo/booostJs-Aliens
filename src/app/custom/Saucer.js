@@ -16,6 +16,8 @@ export default class Saucer extends EventEmitter {
   async moveTo(condition) {
     const x = condition === 'in' ? -837 : -1800;
     const id = condition === 'in' ? 'flyIn' : 'flyOut';
+    const event =
+      condition === 'in' ? Saucer.events.FLY_IN : Saucer.events.FLY_AWAY;
 
     await gsap.to(this._saucerElement, {
       x,
@@ -23,7 +25,7 @@ export default class Saucer extends EventEmitter {
       ease: 'power3.inOut',
       duration: 3,
     });
-    this.emit(Saucer.events.FLY_IN);
+    this.emit(event);
   }
 
   async toggleBeam(condition) {
