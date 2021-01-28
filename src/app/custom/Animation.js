@@ -22,7 +22,7 @@ export default class Animation {
 
     this.saucer = saucer;
     this.cow = cow;
-
+    this.saucer.on(Saucer.events.BAM_SHOW, () => console.log('gg'));
     await this.saucer.moveTo('in');
     await this.saucer.toggleBeam('in');
     await this.cow.moveTo();
