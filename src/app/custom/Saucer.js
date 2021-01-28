@@ -22,7 +22,7 @@ export default class Saucer extends EventEmitter {
     await gsap.to(this._saucerElement, {
       x,
       id,
-      ease: 'power3.inOut',
+      ease: 'power3.in',
       duration: 3,
     });
     this.emit(event);
@@ -38,8 +38,8 @@ export default class Saucer extends EventEmitter {
       condition === 'in' ? Saucer.events.BAM_SHOW : Saucer.events.BEAM_HIDE;
 
     await animation
-      .to(this._beamTopElement, { duration: 1.5, id: idTop, opacity }, '')
-      .to(this._beamBottomElement, { duration: 1.5, id: idBot, opacity }, '');
+      .to(this._beamTopElement, { duration: 1, id: idTop, opacity }, '')
+      .to(this._beamBottomElement, { duration: 1, id: idBot, opacity }, '');
     this.emit(event);
   }
 

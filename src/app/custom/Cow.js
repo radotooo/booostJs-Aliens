@@ -9,7 +9,7 @@ export default class Cow extends EventEmitter {
 
   static get events() {
     return {
-      ABDUCT_COMPLETE: 'abduct_completed',
+      ABDUCT_COMPLETED: 'abduct_completed',
     };
   }
 
@@ -19,7 +19,7 @@ export default class Cow extends EventEmitter {
       id: 'cowAbduction',
       duration: 2,
     });
-    this.emit(Cow.events.ABDUCT_COMPLETE);
+    this.emit(Cow.events.ABDUCT_COMPLETED);
   }
   async hide() {
     await gsap.to(this._cowElement, { opacity: 0, id: 'cowHide' });
