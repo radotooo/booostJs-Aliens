@@ -35,7 +35,7 @@ export default class Application extends EventEmitter {
     // Initiate classes and wait for async operations here.
     const animation = new Animation();
 
-    animation.start();
+    await animation.start();
 
     this.emit(Application.events.APP_READY);
   }

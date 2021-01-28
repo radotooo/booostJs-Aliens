@@ -36,8 +36,8 @@ export default class Saucer extends EventEmitter {
       condition === 'in' ? Saucer.events.BAM_SHOW : Saucer.events.BEAM_HIDE;
 
     await animation
-      .to(this._beamTopElement, { duration: 1.5, idTop, opacity }, '')
-      .to(this._beamBottomElement, { duration: 1.5, idBot, opacity }, '');
+      .to(this._beamTopElement, { duration: 1.5, id: idTop, opacity }, '')
+      .to(this._beamBottomElement, { duration: 1.5, id: idBot, opacity }, '');
     this.emit(event);
   }
 
