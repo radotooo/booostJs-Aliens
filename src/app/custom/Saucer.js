@@ -14,7 +14,7 @@ export default class Saucer extends EventEmitter {
   }
 
   async moveTo(condition) {
-    const x = condition === 'in' ? -837 : -1800;
+    const x = condition === 'in' ? -835 : -1800;
     const id = condition === 'in' ? 'flyIn' : 'flyOut';
     const event =
       condition === 'in' ? Saucer.events.FLY_IN : Saucer.events.FLY_AWAY;
