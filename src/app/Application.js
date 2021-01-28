@@ -1,7 +1,6 @@
 import config from '../config';
 import EventEmitter from 'eventemitter3';
 import Animation from './custom/Animation';
-import Saucer from './custom/Saucer';
 
 const EVENTS = {
   APP_READY: 'app_ready',

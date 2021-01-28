@@ -22,10 +22,6 @@ export default class Animation {
 
     this.saucer = saucer;
     this.cow = cow;
-    this.saucer.on('beam_showed', () => console.log('beam_showed'));
-    this.saucer.on('beam_hide', () => console.log('beam_shide'));
-    this.saucer.on('fly_in', () => console.log('fly_in'));
-    this.saucer.on('fly_away', () => console.log('fly_Out'));
 
     await this.saucer.moveTo('in');
     await this.saucer.toggleBeam('in');
